@@ -1,47 +1,58 @@
-# Svelte + TS + Vite
+# Our Stories 🍁
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+Our Stories is a mobile application dedicated to showcasing the rich and diverse life stories of Indigenous people in Canada. Every day, users can delve into a new story, bringing them closer to understanding the experiences, culture, and wisdom of these remarkable individuals.
 
-## Recommended IDE Setup
+## Features 🌟
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- **Daily Stories**: Engage with a new story every day.
+- **Integrated Social Media**: Connect with individuals on platforms like Instagram, Facebook, and Twitter directly at the end of story to follow up.
+- **Simple Design**: A user-friendly interface built with care and respect for the stories it conveys.
+- **Notifications**: Stay updated when a new story is available.
 
-## Need an official Svelte framework?
+## Build With 🛠️
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- [Svelte](https://svelte.dev): Innovative framework for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org): Typed superset of JavaScript that compiles to plain JavaScript.
+- [Vite](https://vitejs.dev): Next-generation frontend tooling.
+- [TailwindCSS](https://tailwindcss.com): A utility-first CSS framework for rapidly building custom designs.
+- [CapacitorJS](https://capacitorjs.com): Cross-platform native runtime for web apps.
 
-## Technical considerations
+## Contributing 🤝
 
-**Why use this over SvelteKit?**
+### Prerequisites
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+- Node.js & PNPM
+- Android Studio (for Android development)
+- Xcode (for iOS development)
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+### Installation
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mahyarmirrashed/our-stories.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd our-stories
+   ```
+3. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+4. Run the application in development mode:
+   ```bash
+   pnpm run dev
+   ```
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+### Building for Mobile
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+Refer to the Capacitor [official documentation](https://capacitorjs.com/docs) for detailed steps on building for Android and iOS platforms.
 
-**Why include `.vscode/extensions.json`?**
+## Acknowledgements 💕
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+- To all the wonderful individuals who shared their stories and enriched this platform with their experiences.
+- Everyone who contributed to the development, funding, and realization of Our Stories.
 
-**Why enable `allowJs` in the TS template?**
+## License 📜
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from "svelte/store";
-export default writable(0);
-```
+This project is licensed under the [MIT License](./LICENSE).
